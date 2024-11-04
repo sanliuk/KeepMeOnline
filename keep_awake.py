@@ -105,7 +105,7 @@ interval_warning_label = ctk.CTkLabel(root, text="", text_color="red")
 interval_warning_label.pack()
 
 # Imposta l'icona della finestra (assicurati che il percorso dell'icona sia corretto)
-root.iconbitmap("favicon.ico")
+#root.iconbitmap("favicon.ico")
 
 distance_label = ctk.CTkLabel(root, text="Distance (pixels):")
 distance_label.pack(pady=(10, 0))
