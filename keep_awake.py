@@ -12,10 +12,10 @@ use_key = False
 # Crea la finestra principale prima della creazione delle immagini
 root = ctk.CTk()
 root.title("Keep Me Online")
-root.geometry("350x300")
+root.geometry("450x400")
 
 # Funzione per creare un'immagine circolare di un dato colore
-def create_circle_image(color, size=(10, 10)):
+def create_circle_image(color, size=(20, 20)):
     image = Image.new("RGBA", size, (255, 0, 0, 0))
     draw = ImageDraw.Draw(image)
     draw.ellipse((0, 0, size[0], size[1]), fill=color)
@@ -30,9 +30,6 @@ def start_movement():
     if running:
         return  # Se è già in esecuzione, non fare nulla
     running = True
-    update_status("activated")  # Aggiorna lo stato a attivato
-    start_button.configure(fg_color="green", text_color="white")
-    stop_button.configure(fg_color="white", text_color="black")
 
     try:
         interval = float(interval_entry.get())
@@ -40,7 +37,28 @@ def start_movement():
         key_to_press = key_entry.get() if use_key else None
     except ValueError:
         messagebox.showerror("Input Error", "Please enter valid numbers for interval and distance.")
+        running = False
         return
+
+    # Verifica se l'intervallo è inferiore a 1 secondo
+    if interval < 1:
+        interval_warning_label.configure(text="The entered interval is too short. Please enter a value greater than 1.", text_color="red")
+        running = False
+        return
+    else:
+        interval_warning_label.configure(text="")
+
+    # Verifica se la distanza è maggiore di 50 pixel
+    if distance > 50:
+        distance_warning_label.configure(text="We recommend using values below 50 for safety reasons.", text_color="red")
+        running = False
+        return
+    else:
+        distance_warning_label.configure(text="")
+
+    update_status("activated")  # Aggiorna lo stato a attivato
+    start_button.configure(fg_color="green", text_color="white")
+    stop_button.configure(fg_color="white", text_color="black")
 
     def move_mouse_and_press_key():
         while running:
@@ -82,6 +100,10 @@ interval_entry = ctk.CTkEntry(root, justify='center', width=120)
 interval_entry.pack(pady=5)
 interval_entry.insert(0, "300")
 
+# Messaggio di avviso per l'intervallo
+interval_warning_label = ctk.CTkLabel(root, text="", text_color="red")
+interval_warning_label.pack()
+
 # Imposta l'icona della finestra (assicurati che il percorso dell'icona sia corretto)
 root.iconbitmap("favicon.ico")
 
@@ -90,6 +112,10 @@ distance_label.pack(pady=(10, 0))
 distance_entry = ctk.CTkEntry(root, justify='center', width=120)
 distance_entry.pack(pady=5)
 distance_entry.insert(0, "1")
+
+# Messaggio di avviso per la distanza
+distance_warning_label = ctk.CTkLabel(root, text="", text_color="red")
+distance_warning_label.pack()
 
 key_label = ctk.CTkLabel(root, text="Key to press:")
 key_label.pack(pady=(10, 0))
