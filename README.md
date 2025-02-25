@@ -53,5 +53,5 @@ This tool is intended for ethical use only. The author is not responsible for an
 [MIT License](LICENSE)
 
 ---
-Feel free to update `ExeScreenshot.png` with the actual image path in your repository.
+
 
