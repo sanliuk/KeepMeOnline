@@ -52,6 +52,3 @@ This tool is intended for ethical use only. The author is not responsible for an
 ## License
 [MIT License](LICENSE)
 
----
-
-
