@@ -1,66 +1,77 @@
-Here’s the README.md file in English, organized for both users who want to run the code and those who want to modify or fork it.
+Keep Me Online
 
 
 
+Overview
 
-# Keep Awake Script to always appear Online
+Keep Me Online is a simple Python-based UI application that prevents online inactivity detection by simulating user inputs. The tool can periodically move the mouse cursor or send a keyboard input (such as pressing the Shift key) to keep the user appearing active in online sessions.
 
-This project contains a Python script to keep your Discord status active by simulating periodic mouse movements.
+Features
 
-## 1. For Users Who Just Want to Run the Program
+Customizable Activity Simulation:
 
-### Prerequisites
-- **Python** 3.11.4 or higher installed on your computer.
+Set the mouse movement distance (default: 50 px).
 
-### Steps to Run the Program
+Choose the interval between actions (default: 50 seconds).
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/keep-awake.git
-   cd keep-awake
+Select a keyboard input to simulate (default: Shift).
 
+Start/Stop Functionality:
 
-2.Install Dependencies: Install pyautogui, which is required for mouse control:
+Press the Start button to activate the "Keep Me Online" process.
 
+Press the Stop button to end the process.
 
+Status Indicator:
 
-pip install pyautogui
+Green status when active.
 
-3.Create an Executable with pyinstaller (Optional): If you want to create an .exe file, install pyinstaller and run the command below:
+Red status when inactive.
 
-python -m pip install --user pyinstaller
-C:\Users\[your_name]\AppData\Roaming\Python\Python311\Scripts\pyinstaller --onefile keep_awake.py
+Emergency Stop:
 
+Press Ctrl + P to immediately terminate the process.
 
-You’ll find the .exe file in the dist folder, ready to run with a double-click.
+Installation
 
-Note: If pyinstaller is not recognized, add the scripts folder (C:\Users\[your_name]\AppData\Roaming\Python\Python311\Scripts) to your system PATH.
+Prerequisites
 
+Python 3.x
 
-2. For Users Who Want to Modify or Fork the Code
-If you want to customize the script, here are the key files and commands to work with the code.
+Required libraries: pyautogui, tkinter
 
-Project Structure
-keep_awake.py: The main file containing the code to keep your Discord status active.
-Steps to Modify
-Edit the Code: Open keep_awake.py in an editor like Visual Studio Code, and customize the behavior. For example, you can modify time.sleep(300) to change how often the mouse moves (300 seconds = 5 minutes).
+Setup
 
-Run the Script to Test:
-python keep_awake.py
-Create an Executable for Distribution: After making modifications, create a new .exe by running:
-C:\Users\[your_name]\AppData\Roaming\Python\Python311\Scripts\pyinstaller --onefile keep_awake.py
+Clone the repository:
 
+git clone https://github.com/yourusername/keep-me-online.git
+cd keep-me-online
 
-The updated executable will appear in the dist folder.
+Install dependencies:
 
-Troubleshooting
-pyinstaller not recognized: Add the path C:\Users\[your_name]\AppData\Roaming\Python\Python311\Scripts to your system PATH.
-Permission error when installing packages: Use the --user flag to install packages for the current user only.
+pip install -r requirements.txt
 
+Run the application:
+
+python keep_me_online.py
+
+Usage
+
+Launch the script.
+
+Configure movement distance, loop interval, and input key.
+
+Click Start to begin simulating user activity.
+
+Click Stop to halt the process.
+
+Use Ctrl + P for an emergency stop.
+
+Disclaimer
+
+This tool is intended for ethical use only. The author is not responsible for any misuse or consequences arising from its application.
 
 License
-This project is free to use and modify for personal or educational purposes.
 
-
-
+MIT License
 
