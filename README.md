@@ -1,6 +1,6 @@
 # Keep Me Online
 
-![Keep Me Online UI](path/to/your/image.png)
+![Keep Me Online UI](ExeScreenshot.png)
 
 ## Overview
 **Keep Me Online** is a simple Python-based UI application that prevents online inactivity detection by simulating user inputs. The tool can periodically move the mouse cursor or send a keyboard input (such as pressing the Shift key) to keep the user appearing active in online sessions.
@@ -27,7 +27,7 @@
 ### Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/sanliuk/keep-me-online.git
+   git clone https://github.com/yourusername/keep-me-online.git
    cd keep-me-online
    ```
 2. Install dependencies:
@@ -53,5 +53,5 @@ This tool is intended for ethical use only. The author is not responsible for an
 [MIT License](LICENSE)
 
 ---
-Feel free to update `path/to/your/image.png` with the actual image path in your repository.
+Feel free to update `ExeScreenshot.png` with the actual image path in your repository.
 
