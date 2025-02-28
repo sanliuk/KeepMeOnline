@@ -1,35 +1,38 @@
-# Keep Me Online
+# 🚀 Keep Me Online
 
+## 👀 Overview
+**Keep Me Online** is a Python-based UI application that prevents online inactivity detection by simulating user input. The tool can periodically move the mouse cursor or send a keyboard input (such as the **Shift** key) to keep the session active.
 
-## Overview
-**Keep Me Online** is a simple Python-based UI application that prevents online inactivity detection by simulating user inputs. The tool can periodically move the mouse cursor or send a keyboard input (such as pressing the Shift key) to keep the user appearing active in online sessions.
-
-This application is ready to use as an executable (`.exe`) and can be used by anyone without requiring installation.
+The app is available as an executable (`.exe`), ready to use without installation.
 
 ![Keep Me Online UI](ExeScreenshot.png)
 
-## Features
+---
+
+## 🎯 Features
 - **Customizable Activity Simulation:**
   - Set the mouse movement distance (default: **50 px**).
   - Choose the interval between actions (default: **50 seconds**).
   - Select a keyboard input to simulate (default: **Shift**).
-- **Start/Stop Functionality:**
-  - Press the **Start** button to activate the "Keep Me Online" process.
-  - Press the **Stop** button to end the process.
+- **Easy to Use:**
+  - Press **Start** to activate Keep Me Online.
+  - Press **Stop** to end the process.
 - **Status Indicator:**
-  - Green status when active.
-  - Red status when inactive.
+  - 🟢 **Green** when active.
+  - 🔴 **Red** when inactive.
 - **Emergency Stop:**
-  - Press **Ctrl + P** to immediately terminate the process.
+  - Press **Ctrl + P** to terminate immediately.
 
-## For Developers / Modifications
-If you are interested in modifying the script, follow these steps to set up the development environment.
+---
 
-### Prerequisites
+## 🛠️ For Developers
+Want to modify or improve the project? Here’s how to set up your development environment!
+
+### 📌 Prerequisites
 - Python 3.x
 - Required libraries: `pyautogui`, `tkinter`
 
-### Setup
+### ⚙️ Setup
 1. Clone the repository:
    ```sh
    git clone https://github.com/yourusername/keep-me-online.git
@@ -44,15 +47,21 @@ If you are interested in modifying the script, follow these steps to set up the 
    python keep_me_online.py
    ```
 
-## Usage
+---
+
+## 🖥️ How to Use?
 1. Launch the executable or run the script.
 2. Configure movement distance, loop interval, and input key.
-3. Click **Start** to begin simulating user activity.
+3. Click **Start** to begin activity simulation.
 4. Click **Stop** to halt the process.
-5. Use **Ctrl + P** for an emergency stop.
+5. Use **Ctrl + P** for an **emergency stop**.
 
-## Disclaimer
-This tool is intended for ethical use only. The author is not responsible for any misuse or consequences arising from its application.
+---
 
-## License
+## ⚠️ Disclaimer
+This tool is intended for **ethical use only**. The author **is not responsible** for any misuse or consequences arising from its application.
+
+---
+
+## 📜 License
 [MIT License](LICENSE)
