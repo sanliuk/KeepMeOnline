@@ -1,4 +1,4 @@
-# 🚀 Keep Me Online
+# 🚀 Keep Me Online 🟢
 
 ## 👀 Overview
 **Keep Me Online** is a Python-based UI application that prevents online inactivity detection by simulating user input. The tool can periodically move the mouse cursor or send a keyboard input (such as the **Shift** key) to keep the session active.
