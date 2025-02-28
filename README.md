@@ -55,6 +55,26 @@ Want to modify or improve the project? Here’s how to set up your development e
 3. Click **Start** to begin activity simulation.
 4. Click **Stop** to halt the process.
 5. Use **Ctrl + P** for an **emergency stop**.
+---
+
+## 🚀 Contributions & Support  
+
+Found a bug? Have a feature suggestion? Open an **Issue** or a **Pull Request** on GitHub! 🎉  
+
+💬 For any questions or support, feel free to reach out! 😊  
+
+---
+
+## 💬 Join Our Community!  
+
+Need help or want to learn more about **game development** and **3D modeling**?  
+Join our **Discord community** for support, discussions, and exclusive tutorials! 🎮🔥  
+
+[![Join our Discord](https://img.shields.io/badge/Join%20us%20on-Discord-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/8GBkm252cS)  
+
+---
+
+### 🛠️ Created with ❤️ by San Liuk
 
 ---
 
