@@ -72,9 +72,6 @@ Join our **Discord community** for support, discussions, and exclusive tutorials
 
 [![Join our Discord](https://img.shields.io/badge/Join%20us%20on-Discord-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/8GBkm252cS)  
 
----
-
-### 🛠️ Created with ❤️ by San Liuk
 
 ---
 
@@ -85,3 +82,7 @@ This tool is intended for **ethical use only**. The author **is not responsible*
 
 ## 📜 License
 [MIT License](LICENSE)
+
+---
+
+### 🛠️ Created with ❤️ by San Liuk
