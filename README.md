@@ -67,7 +67,7 @@ Found a bug? Have a feature suggestion? Open an **Issue** or a **Pull Request** 
 
 ## 💬 Join Our Community!  
 
-Need help or want to learn more about **game development** and **3D modeling**?  
+Need help or want to learn more about what I do with my experience in **game development** and **3D modeling**?  
 Join our **Discord community** for support, discussions, and exclusive tutorials! 🎮🔥  
 
 [![Join our Discord](https://img.shields.io/badge/Join%20us%20on-Discord-5865F2?logo=discord&logoColor=white)](https://discord.com/invite/8GBkm252cS)  
