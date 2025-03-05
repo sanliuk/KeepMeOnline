@@ -5,30 +5,30 @@ import customtkinter as ctk
 from tkinter import messagebox
 from PIL import Image, ImageDraw, ImageTk
 
-# Variabile globale per il controllo dello stato del movimento e della pressione di un tasto
+# Global variables for controlling movement and key pressing
 running = False
 use_key = False
 
-# Crea la finestra principale prima della creazione delle immagini
+# Create the main window before creating images
 root = ctk.CTk()
 root.title("Keep Me Online")
 root.geometry("450x400")
 
-# Funzione per creare un'immagine circolare di un dato colore
+# Function to create a circular image with a given color
 def create_circle_image(color, size=(20, 20)):
     image = Image.new("RGBA", size, (255, 0, 0, 0))
     draw = ImageDraw.Draw(image)
     draw.ellipse((0, 0, size[0], size[1]), fill=color)
     return ImageTk.PhotoImage(image)
 
-# Crea le immagini per i pallini verde e rosso dopo aver creato la finestra principale
+# Create images for green and red indicators after creating the main window
 circle_green = create_circle_image("green")
 circle_red = create_circle_image("red")
 
 def start_movement():
     global running
     if running:
-        return  # Se è già in esecuzione, non fare nulla
+        return  # If already running, do nothing
     running = True
 
     try:
@@ -40,7 +40,7 @@ def start_movement():
         running = False
         return
 
-    # Verifica se l'intervallo è inferiore a 1 secondo
+    # Check if the interval is below 1 second
     if interval < 1:
         interval_warning_label.configure(text="The entered interval is too short. Please enter a value greater than 1.", text_color="red")
         running = False
@@ -48,7 +48,7 @@ def start_movement():
     else:
         interval_warning_label.configure(text="")
 
-    # Verifica se la distanza è maggiore di 50 pixel
+    # Check if the distance is greater than 50 pixels
     if distance > 50:
         distance_warning_label.configure(text="We recommend using values below 50 for safety reasons.", text_color="red")
         running = False
@@ -56,7 +56,7 @@ def start_movement():
     else:
         distance_warning_label.configure(text="")
 
-    update_status("activated")  # Aggiorna lo stato a attivato
+    update_status("activated")  # Update status to activated
     start_button.configure(fg_color="green", text_color="white")
     stop_button.configure(fg_color="white", text_color="black")
 
@@ -75,7 +75,7 @@ def start_movement():
 def stop_movement():
     global running
     running = False
-    update_status("deactivated")  # Aggiorna lo stato a disattivato
+    update_status("deactivated")  # Update status to deactivated
     start_button.configure(fg_color="white", text_color="black")
     stop_button.configure(fg_color="red", text_color="white")
 
@@ -94,18 +94,16 @@ def update_status(status):
     else:
         status_label.configure(text="Status: None", image="", compound="left")
 
+# Create UI elements
 interval_label = ctk.CTkLabel(root, text="Interval (seconds):")
 interval_label.pack(pady=(10, 0))
 interval_entry = ctk.CTkEntry(root, justify='center', width=120)
 interval_entry.pack(pady=5)
 interval_entry.insert(0, "300")
 
-# Messaggio di avviso per l'intervallo
+# Warning message for interval
 interval_warning_label = ctk.CTkLabel(root, text="", text_color="red")
 interval_warning_label.pack()
-
-# Imposta l'icona della finestra (assicurati che il percorso dell'icona sia corretto)
-#root.iconbitmap("favicon.ico")
 
 distance_label = ctk.CTkLabel(root, text="Distance (pixels):")
 distance_label.pack(pady=(10, 0))
@@ -113,7 +111,7 @@ distance_entry = ctk.CTkEntry(root, justify='center', width=120)
 distance_entry.pack(pady=5)
 distance_entry.insert(0, "1")
 
-# Messaggio di avviso per la distanza
+# Warning message for distance
 distance_warning_label = ctk.CTkLabel(root, text="", text_color="red")
 distance_warning_label.pack()
 
@@ -131,9 +129,10 @@ start_button.pack(pady=(10, 5))
 stop_button = ctk.CTkButton(root, text="Stop (or press Ctrl+P to stop)", command=stop_movement, width=120, corner_radius=20)
 stop_button.pack(pady=(5, 10))
 
-status_label = ctk.CTkLabel(root, text="Status: None", image="", compound="left")  # Inizialmente senza immagine
+status_label = ctk.CTkLabel(root, text="Status: None", image="", compound="left")  # Initially no image
 status_label.pack(pady=(10, 0))
 
+# Bind Ctrl+P to stop function
 root.bind("<Control-p>", on_ctrl_p)
 
 root.mainloop()
